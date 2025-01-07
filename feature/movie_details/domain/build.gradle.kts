@@ -5,7 +5,7 @@ plugins {
 
 android {
     namespace = "com.feature.movie_details.domain"
-    compileSdk = 34
+    compileSdk = 35
 
     defaultConfig {
         minSdk = 24
