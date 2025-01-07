@@ -1,6 +1,8 @@
 plugins {
     alias(libs.plugins.android.library)
     alias(libs.plugins.kotlin.android)
+    alias(libs.plugins.hilt)
+    kotlin("kapt")
 }
 
 android {
@@ -33,6 +35,14 @@ android {
 }
 
 dependencies {
+
+
+    implementation(libs.hiltAndroid)
+    kapt(libs.hiltCompiler)
+
+    implementation(libs.retrofit)
+    implementation(libs.retrofit.okhttp)
+    implementation(libs.retrofit.gsonConverter)
 
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)

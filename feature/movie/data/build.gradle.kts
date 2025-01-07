@@ -1,6 +1,8 @@
 plugins {
     alias(libs.plugins.android.library)
     alias(libs.plugins.kotlin.android)
+    alias(libs.plugins.hilt)
+    kotlin("kapt")
 }
 
 android {
@@ -33,6 +35,12 @@ android {
 }
 
 dependencies {
+
+    implementation(libs.hiltAndroid)
+    kapt(libs.hiltCompiler)
+
+    implementation(project(":feature:movie:domain"))
+    implementation(project(":core:network"))
 
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
